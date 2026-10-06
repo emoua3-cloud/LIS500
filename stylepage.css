@@ -1,0 +1,262 @@
+/* Page */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fbfaf6;
+  color: #193530;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.75;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+/* Header and navigation */
+
+header {
+  background-color: #e7eee7;
+  border-bottom: 1px solid #d5dfd8;
+  padding: 24px 0;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 14px;
+}
+
+.brand span {
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 14px;
+}
+
+a {
+  color: #215b4c;
+  text-underline-offset: 4px;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 28px;
+  margin-bottom: 12px;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+  border-bottom: 3px solid #215b4c;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 3px solid #ae5b16;
+  outline-offset: 5px;
+}
+
+/* Headings and introduction */
+
+.hero {
+  padding: 70px 0 50px;
+  border-bottom: 1px solid #d5dfd8;
+}
+
+.hero.small {
+  padding: 48px 0 30px;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 64px;
+  margin: 16px 0 22px;
+  max-width: 850px;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: 29px;
+}
+
+h3 {
+  font-size: 19px;
+}
+
+p, li, dd {
+  max-width: 700px;
+}
+
+.lead {
+  font-size: 21px;
+  max-width: 700px;
+}
+
+.eyebrow, .number {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-block;
+  background-color: #215b4c;
+  color: white;
+  padding: 11px 20px;
+  margin-top: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Content */
+
+section {
+  padding: 25px 0;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.cards article {
+  flex: 1;
+  min-width: 0;
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #d5dfd8;
+  border-radius: 6px;
+}
+
+.note, .reflection, .contents {
+  background-color: #edf1e8;
+  padding: 22px 28px;
+  border-left: 4px solid #215b4c;
+  margin: 26px 0;
+}
+
+.note {
+  background-color: #fff2df;
+  border-left-color: #a96921;
+}
+
+.reflection h3 {
+  margin-top: 0;
+}
+
+/* Team */
+
+.profile {
+  max-width: 820px;
+  padding: 28px 0;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 18px;
+  align-items: flex-start;
+}
+
+.team-member {
+  width: calc(50% - 14px);
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #d5dfd8;
+  border-radius: 10px;
+}
+
+.team-member > * {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 420px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #d5dfd8;
+  margin-bottom: 10px;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+dd {
+  margin: 5px 0 0;
+}
+
+.muted {
+  color: #4d625c;
+  font-size: 14px;
+}
+
+/* Footer and skip link */
+
+footer {
+  margin-top: 48px;
+  padding: 25px 0;
+  border-top: 1px solid #d5dfd8;
+  font-size: 14px;
+}
+
+.skip {
+  position: absolute;
+  top: -100px;
+  left: 12px;
+  background-color: white;
+  padding: 10px;
+}
+
+.skip:focus {
+  top: 12px;
+}
+
+[id] {
+  scroll-margin-top: 20px;
+}
+
+/* Small screens */
+
+@media (max-width: 720px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .team-member {
+    width: 100%;
+  }
+
+  .brand span {
+    display: block;
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .hero,
+  .hero.small {
+    padding-top: 38px;
+  }
+}

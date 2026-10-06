@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>index.html</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome | LIS500</title>
+    <link rel="stylesheet" href="stylepage.css">
 </head>
 <body>
-    <h1>Hello, World! Welcome to the world of Ethan and Ethans!</h1>
-    <p>This is my very first HTML file. Pls go easy on me >.< </p>
+    <!--
+    We decided to link this page to a shared stylesheet for consistency across the site.
+    So all colors, fonts, and spacing remain consistent across the entire website. We decided
+    to maintain a light background and dark green text to make the content easy to read. The
+    wrap class ensures that the content is centered with adequate spacing around the edges.
+    Placing the navigation inside the header makes it easy for visitors to find other pages.
+    The current page link is bold and has a bottom border to show where the visitor is. Headings
+    help organize the information and each paragraph provides detailed explanations. The concept of a clean
+    and organized layour contributes to an easygoing reading experience. Thus, we intentionally designed
+    the featured sections to be visually distinct and easy to navigate/read. Overall, these design choices 
+    aim to create a user-friendly and accessible experience for all visitors.
+
+    EM & CS
+    -->
+
+    <a class="skip" href="#main">Skip to main content</a>
+
+    <header>
+        <div class="wrap">
+            <p class="brand">LIS500 <span>Technology &amp; Equity</span></p>
+            <nav aria-label="Main navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="resources.html">Resource Guide</a>
+                <a href="techheroes.html">Tech Heroes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap">
+        <section class="hero">
+            <p class="eyebrow">Technology &amp; Equity</p>
+            <h1>Welcome to LIS500</h1>
+            <p>We are exploring how technology shapes the people who use it and how identity, bias, and access influence our experiences.</p>
+            <p class="lead">Technology connects people. Understanding who it includes—and who it leaves out—helps us build something better.</p>
+            <a class="button" href="resources.html">Explore the resource guide</a>
+        </section>
+
+        <section>
+            <h2>Start exploring</h2>
+            <div class="cards">
+                <article>
+                    <p class="number">01 / ABOUT</p>
+                    <h3>Meet the person behind the site</h3>
+                    <p>Learn about my interests and the purpose of this project.</p>
+                    <a href="about.html">Visit About Us</a>
+                </article>
+                <article>
+                    <p class="number">02 / LEARN</p>
+                    <h3>Understand bias and identity</h3>
+                    <p>A beginner-friendly guide to implicit bias, the IBT, and intersectionality.</p>
+                    <a href="resources.html">Open the guide</a>
+                </article>
+                <article>
+                    <p class="number">03 / DISCOVER</p>
+                    <h3>Meet a tech hero</h3>
+                    <p>Explore Afua Bruce’s work connecting technology and equity.</p>
+                    <a href="techheroes.html">Read the profile</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap"></div>
+    </footer>
 </body>
 </html>
+

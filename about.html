@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us | LIS500</title>
+    <link rel="stylesheet" href="stylepage.css">
+</head>
+<body>
+    <!--
+    We decided that the layout of this design for the About Us page should be simple and focused
+    on introducing the team and providing context for our project. Keeping the same consistency of
+    background color and fonts, we aimed to maintain visual consistency with the rest of the site.
+    This approach helps create a cohesive and visually comprehensive experience for visitors of all backgrounds.
+    The idea of a split middle section holding each team member's profile side by side helps visitors quickly get
+    to know the team visually and contextually. We used the (.team { display: grid; grid-template-columns: repeat, gap: 28px;}),
+    to split the team members into a responsive grid layout. We thought this layout would make it easier
+    to introduce both members effectively and ensure the layout remains visually appealing. The idea of
+    sharing side-by-side profiles helps create a more engaging and personal connection with the team.
+    Finally, the footer provides a consistent ending to the page, reinforcing the overall design and
+     navigation structure.
+
+    EM & CS
+    -->
+
+    <a class="skip" href="#main">Skip to main content</a>
+
+    <header>
+        <div class="wrap">
+            <p class="brand">LIS500 <span>Technology &amp; Equity</span></p>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html" aria-current="page">About Us</a>
+                <a href="resources.html">Resource Guide</a>
+                <a href="techheroes.html">Tech Heroes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap">
+        <section class="hero small">
+            <p class="eyebrow">Meet the team</p>
+            <h1>About Us</h1>
+            <p class="lead">Two UW–Madison students exploring technology, identity, and equity.</p>
+        </section>
+
+        <section class="team" aria-label="Our team">
+            <article class="team-member">
+                <img class="portrait" src="ethan-moua.jpg" alt="Portrait of Ethan Moua" width="400" height="400">
+                <h2>Ethan Moua</h2>
+                <p class="eyebrow">Information Science</p>
+                <p>Hi, I’m Ethan. I’m an Information Science student at the University of Wisconsin–Madison with an interest in IT and cybersecurity. I want to understand how technology works and how it affects the people who use it.</p>
+                <p>In cybersecurity, protecting people means paying attention to their needs. A system can be technically strong but still difficult for someone to access or understand. That makes questions about fairness relevant to the work I want to do.</p>
+            </article>
+
+            <article class="team-member">
+                <img class="portrait" src="casey-morgan-schelling.png" alt="Portrait of Casey Morgan Schelling" width="800" height="800">
+                <h2>Casey Morgan Schelling</h2>
+                <p class="eyebrow">Consumer Behavior &amp; Marketplace Studies</p>
+                <p>Hi, I’m Casey Morgan Schelling. I’m a junior at the University of Wisconsin–Madison majoring in Consumer Behavior &amp; Marketplace Studies with a certificate in Digital Studies. I took LIS500 because I wanted to learn more about how technology affects people and our society. Technology is such a big part of everyday life, so I find it interesting to explore both its benefits and the problems that come with it.</p>
+                <p>My favorite area of technology is artificial intelligence because of how quickly it has grown and the many different ways people use it. I don’t have one specific tech hero, but I’m interested in people who create new technology while also thinking about how it impacts society.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Why this site exists</h2>
+            <p>This LIS500 project explores the relationship between technology, identity, and equity. Our goal is to make unfamiliar concepts easier to understand and encourage people to think about the assumptions they bring into everyday decisions.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap"></div>
+    </footer>
+</body>
+</html>
+
