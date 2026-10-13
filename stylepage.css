@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background-color: #fbfaf6;
+  background-color: #f5eddf;
   color: #193530;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.75;
@@ -21,8 +21,8 @@ body {
 /* Header and navigation */
 
 header {
-  background-color: #e7eee7;
-  border-bottom: 1px solid #d5dfd8;
+  background-color: #d3dfd0;
+  border-bottom: 1px solid #d3dfd0;
   padding: 24px 0;
 }
 
@@ -38,8 +38,9 @@ header {
   margin-left: 14px;
 }
 
+
 a {
-  color: #215b4c;
+  color: #193530;
   text-underline-offset: 4px;
 }
 
@@ -53,7 +54,7 @@ nav a {
 
 nav a[aria-current="page"] {
   font-weight: bold;
-  border-bottom: 3px solid #215b4c;
+  border-bottom: 3px solid #193530;
 }
 
 a:hover {
@@ -61,7 +62,7 @@ a:hover {
 }
 
 a:focus {
-  outline: 3px solid #ae5b16;
+  outline: 3px solid #193530;
   outline-offset: 5px;
 }
 
@@ -69,7 +70,7 @@ a:focus {
 
 .hero {
   padding: 70px 0 50px;
-  border-bottom: 1px solid #d5dfd8;
+  border-bottom: 1px solid #d3dfd0;
 }
 
 .hero.small {
@@ -114,8 +115,8 @@ p, li, dd {
 
 .button {
   display: inline-block;
-  background-color: #215b4c;
-  color: white;
+  background-color: #193530;
+  color: #f5eddf;
   padding: 11px 20px;
   margin-top: 12px;
   border-radius: 4px;
@@ -137,21 +138,21 @@ section {
   flex: 1;
   min-width: 0;
   padding: 24px;
-  background-color: white;
-  border: 1px solid #d5dfd8;
+  background-color: #f5eddf;
+  border: 1px solid #d3dfd0;
   border-radius: 6px;
 }
 
 .note, .reflection, .contents {
-  background-color: #edf1e8;
+  background-color: #d3dfd0;
   padding: 22px 28px;
-  border-left: 4px solid #215b4c;
+  border-left: 4px solid #193530;
   margin: 26px 0;
 }
 
 .note {
-  background-color: #fff2df;
-  border-left-color: #a96921;
+  background-color: #f5eddf;
+  border-left-color: #193530;
 }
 
 .reflection h3 {
@@ -176,8 +177,8 @@ section {
 .team-member {
   width: calc(50% - 14px);
   padding: 24px;
-  background-color: white;
-  border: 1px solid #d5dfd8;
+  background-color: #f5eddf;
+  border: 1px solid #d3dfd0;
   border-radius: 10px;
 }
 
@@ -192,7 +193,7 @@ section {
   height: 420px;
   object-fit: cover;
   border-radius: 12px;
-  border: 1px solid #d5dfd8;
+  border: 1px solid #d3dfd0;
   margin-bottom: 10px;
 }
 
@@ -206,7 +207,7 @@ dd {
 }
 
 .muted {
-  color: #4d625c;
+  color: #193530;
   font-size: 14px;
 }
 
@@ -215,7 +216,7 @@ dd {
 footer {
   margin-top: 48px;
   padding: 25px 0;
-  border-top: 1px solid #d5dfd8;
+  border-top: 1px solid #d3dfd0;
   font-size: 14px;
 }
 
@@ -223,7 +224,7 @@ footer {
   position: absolute;
   top: -100px;
   left: 12px;
-  background-color: white;
+  background-color: #f5eddf;
   padding: 10px;
 }
 
@@ -259,4 +260,59 @@ footer {
   .hero.small {
     padding-top: 38px;
   }
+}
+
+/* Consistent color roles: sage introductions, cream content, green borders. */
+body { background-color: #f5eddf; color: #193530; }
+header, footer { background-color: #d3dfd0; }
+header { border-bottom: 2px solid #193530; }
+footer { border-top: 2px solid #193530; }
+
+/* Every main section has a visible boundary . */
+main.wrap > section,
+main.wrap > article,
+main.wrap > aside,
+.profile > section,
+.profile > article {
+    background-color: #f5eddf;
+    border: 1px solid #193530;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+/* Sage always marks introductions, menus, or reflection callouts. */
+main.wrap .hero,
+main.wrap .contents,
+main.wrap .reflection,
+main.wrap .note {
+    background-color: #d3dfd0;
+    border: 1px solid #193530;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+/* Profiles and reading sections share a cream background. */
+.team-member,
+.cards article,
+.profile {
+    background-color: #f5eddf;
+    border: 1px solid #193530;
+}
+.profile { padding: 24px; border-radius: 8px; }
+.portrait { border-color: #193530; }
+
+/* Keep the team container open; each member already has a border. */
+main.wrap > .team { border: 0; padding: 0; background-color: #f5eddf; }
+
+@media (max-width: 720px) {
+    main.wrap > section,
+    main.wrap > article,
+    main.wrap > aside,
+    main.wrap .hero,
+    main.wrap .contents,
+    main.wrap .reflection,
+    main.wrap .note {
+        padding: 18px;
+    }
 }
