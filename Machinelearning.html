@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Machine Learning Project | LIS500</title>
+    <link rel="stylesheet" href="stylepage.css">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to main content</a>
+
+    <header>
+        <div class="wrap">
+            <p class="brand">LIS500 <span>Technology &amp; Equity</span></p>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="resources.html">Resource Guide</a>
+                <a href="techheroes.html">Tech Heroes</a>
+                <a href="Machinelearning.html" aria-current="page">Machine Learning</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap">
+        <section class="hero">
+            <p class="eyebrow">Machine learning / Project</p>
+            <h1>Teaching a model</h1>
+            <p class="lead"> Man? Women? Casey, or Ethan? Can this model identify either?</p>
+        </section>
+
+        <section id="overview">
+            <h2>Project objective &amp; scope</h2>
+            <p>We used Google's Teachable Machine to create a model image classifier too identify our faces. The project allows us to see how models are trained and how they're making predictions.</p>
+            <div class="cards">
+                <article>
+                    <p class="number">01 / TASK</p>
+                    <h3>Classifing Images</h3>
+                    <p>Train a model to distinguish between different images (Ethan or Casey).</p>
+                </article>
+                <article>
+                    <p class="number">02 / DATA</p>
+                    <h3>Recording our Images</h3>
+                    <p>Build a collection of original image samples, including variation in lighting and angles.</p>
+                </article>
+            </div>
+        </section>
+
+        <aside class="contents">
+            <h2>On this page</h2>
+            <ul>
+                <li><a href="#process">How we built the model</a></li>
+                <li><a href="#try-model">Try the model</a></li>
+                <li><a href="#algorithm">What happens when it predicts?</a></li>
+                <li><a href="#reflection">Project reflections</a></li>
+            </ul>
+        </aside>
+
+        <section id="process">
+            <h2>How we built the model</h2>
+            <p> We recorded images of ourselves, some with different lighting and angles. Teachable Machine then organizaes these images and uses them to train the model.</p>
+            <div class="note">
+                <h3>Data is part of the design</h3>
+                <p>A model can only learn patterns represented through its training examples. A small or narrowly collected dataset may work well for familiar faces while producing less dependable results for other individuals or conditions.</p>
+            </div>
+        </section>
+
+        <section id="try-model">
+            <h2>Try the model</h2>
+            <p>Allow camera access to see whether the you classify as Casey or Ethan. Try changing the lighting, angle, or distance from the camera and compare the predictions.</p>
+            <p class="muted">These scores show resemblance to the model’s Casey and Ethan examples; the model does not accurately predict gender, .</p>
+            <div class="model-controls">
+                <button class="button" id="start-camera" type="button">Start camera</button>
+                <button class="button" id="stop-camera" type="button" disabled>Stop camera</button>
+            </div>
+            <p id="model-status" class="muted" role="status" aria-live="polite">Start the camera to load the model. Camera access is required.</p>
+            <div id="webcam-container" aria-label="Live camera preview"></div>
+            <div id="prediction-container" aria-label="Model predictions">
+                <h3>Predictions</h3>
+                <ul class="prediction-list">
+                    <li>
+                        <span>Casey resemblance (woman)</span>
+                        <div class="prediction-confidence">
+                            <progress id="casey-probability" max="1" value="0" aria-label="Casey resemblance score">0%</progress>
+                            <span id="casey-label">Waiting</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Ethan resemblance (man)</span>
+                        <div class="prediction-confidence">
+                            <progress id="ethan-probability" max="1" value="0" aria-label="Ethan resemblance score">0%</progress>
+                            <span id="ethan-label">Waiting</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="algorithm">
+            <h2>What happens when it predicts?</h2>
+            <p> When the classifier makes a prediction, it provides a confidence score for each possible class (Ethan or Casey/  Man or Woman). The classier compares the image or webcam footage with the visual patterns it learned from the trained dataset, the gives the image a resemblance score for each class. It doesn't know a person's identity; thus, it can only match an image to the Casey, and Ethan labels used during training.</p>
+            <p>Testing different lighting, angles, backgrounds, and people can reveal when its predictions become uncertain or incorrect. These results are useful evidence about the system's limits and not just the mistakes to hide behind a single accuracy score.</p>
+        </section>
+
+        <section id="reflection">
+            <h2>Project reflections</h2>
+            <p>For our project, we wanted to explore how a machine learning model can be trained to recognize the differences between two individuals using images of them as inspired by Joy Buolamwini. Through this process, we used Google’s Teachable Machine to create an image classifier that can identify whether a picture could identify Ethan or Casey. Thus, our goal was to understand how machines learn from our visual data, and how the quality of the inputted data can affect their predictions.</p>
+            <p>At first, we considered creating a facial expression classifier that could try to identify emotions such as happiness, sadness, or a neutral expression. However, we decided to change our direction and focus on two individuals instead. This narrows down the focus and allows the opportunity to examine how a machine learns how to distinguish between people based on the images it receives. Although the project seems simple on the surface, it raises important questions about how facial recognition systems work and whether we should even trust their results.</p>
+            <p>Through this project process, we are each contributing roughly 100 photos each of ourselves, giving us a total dataset of approximately 200 images. Through these images, we plan to vary the lighting, camera angles, distance, or facial expressions. This will allow us to examine whether the model can still identify under the many different conditions and not just rely on similar looking photos. </p>
+            <p>One of the most important components of this project was collecting the images that we used to train the model. To train a model, we needed the machine to train from examples to learn from. Thus, we learned that the variety and quality of each image could have a crucial impact on how the model performs. Thus, for our dataset, we collected photographs of ourselves, both group members under different conditions. For example, some images will have brighter lighting, while others will have darker or uneven lighting. We also tried changing the distance between camera and the subject, and using different angles. These little differences are crucial to the process as it highlights how people do not always look the same in every photograph. </p>
+            <p>We knew that if the model was trained under the same conditions, it might learn to recognize those specific conditions rather than the individuals we’re trying to teach it. This could lead to an inaccurate prediction where the model can encounter a photograph that looks different from the training images. This allows us to come to a conclusion that through this process, collection of data is not just about gathering as many samples as we can, but carefully collecting what these samples represent and what the model may encounter when processing its training. </p>
+            <p>A huge influence on our project was Joy Buolamwini, and her book Unmasking AI. Her work discussed the problems that could occur when artificial intelligence systems are developed with incomplete or unrepresentative datasets. Joy’s significant research into commercial facial analysis systems found that significant differences in error rates across demographic groups prevails. As darker skin toned women experienced much greater error rates than lighter toned individuals examined by the system. This research connects directly to our project because we are creating a model that uses photographs of human faces to make predictions and resemblances to each label. Even though our classifier is much smaller and only recognizes two people, it depends on the data we provide it. Thus, if the predictions become less reliable as the conditions aren’t met.</p>
+            <p>One lesson we’ve taken away from Buolamwini’s work was that artificial intelligence is not automatically objective. People make decisions about what to collect, categories of conditions, and how the model should be trained. These decisions can significantly influence results, and a machine may produce a prediction based on the patterns from its training data. However, something to note is that these predictions are always accurate or fair. We also recognize that our project has limitations that are different from the larger systems discussed from Joy’s Unmasking AI. Our dataset only includes two individuals, so it cannot represent the variety of faces, appearances, and conditions found within the general population. It would also be important to understand that just because the model can distinguish between us, it doesn’t mean that it would be capable of accurately recognizing other people.</p>
+
+        </section>
+    </main>
+# Teachable Machine Code 
+    <footer>
+        <div class="wrap">
+            <p>LIS500 · Technology &amp; Equity</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script>
+        const modelUrl = "https://teachablemachine.withgoogle.com/models/VRMXk0B3H/";
+        const startButton = document.getElementById("start-camera");
+        const stopButton = document.getElementById("stop-camera");
+        const statusText = document.getElementById("model-status");
+        const webcamContainer = document.getElementById("webcam-container");
+        const caseyBar = document.getElementById("casey-probability");
+        const ethanBar = document.getElementById("ethan-probability");
+        const caseyLabel = document.getElementById("casey-label");
+        const ethanLabel = document.getElementById("ethan-label");
+        let model;
+        let webcam;
+        let animationFrame;
+        let cameraSession = 0;
+
+        function getErrorMessage(error) {
+            if (error && typeof error.message === "string" && error.message.trim()) {
+                return error.message;
+            }
+            if (typeof error === "string" && error.trim()) {
+                return error;
+            }
+            return "An unexpected browser error occurred.";
+        }
+
+        function stopCamera() {
+            cameraSession += 1;
+            if (animationFrame !== undefined) {
+                cancelAnimationFrame(animationFrame);
+                animationFrame = undefined;
+            }
+            if (webcam) {
+                webcam.stop();
+                webcam = undefined;
+            }
+            webcamContainer.replaceChildren();
+            stopButton.disabled = true;
+        }
+
+        function showPredictions(predictions) {
+            for (const prediction of predictions) {
+                const percentage = `${(prediction.probability * 100).toFixed(1)}%`;
+                if (prediction.className === "Casey") {
+                    caseyBar.value = prediction.probability;
+                    caseyLabel.textContent = percentage;
+                } else if (prediction.className === "Ethan") {
+                    ethanBar.value = prediction.probability;
+                    ethanLabel.textContent = percentage;
+                }
+            }
+        }
+
+        async function predict(session) {
+            if (!webcam || session !== cameraSession) {
+                return;
+            }
+            try {
+                webcam.update();
+                const predictions = await model.predict(webcam.canvas);
+                if (session !== cameraSession || !webcam) {
+                    return;
+                }
+                showPredictions(predictions);
+                animationFrame = requestAnimationFrame(() => predict(session));
+            } catch (error) {
+                stopCamera();
+                statusText.textContent = `Prediction stopped: ${getErrorMessage(error)}`;
+                startButton.disabled = false;
+            }
+        }
+
+        startButton.addEventListener("click", async () => {
+            startButton.disabled = true;
+            statusText.textContent = "Loading the model and requesting camera access…";
+            try {
+                if (!model) {
+                    model = await tmImage.load(`${modelUrl}model.json`, `${modelUrl}metadata.json`);
+                }
+                const nextWebcam = new tmImage.Webcam(320, 240, true);
+                await nextWebcam.setup();
+                webcam = nextWebcam;
+                await webcam.play();
+                webcamContainer.replaceChildren(webcam.canvas);
+                statusText.textContent = "Camera is on. Predictions update as the image changes.";
+                stopButton.disabled = false;
+                cameraSession += 1;
+                predict(cameraSession);
+            } catch (error) {
+                stopCamera();
+                statusText.textContent = `Unable to start the model: ${getErrorMessage(error)} Check camera permission and use this page over HTTPS or localhost.`;
+                startButton.disabled = false;
+            }
+        });
+
+        stopButton.addEventListener("click", () => {
+            stopCamera();
+            statusText.textContent = "Camera stopped.";
+            startButton.disabled = false;
+        });
+    </script>
+</body>
+</html>
