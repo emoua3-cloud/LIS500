@@ -9,6 +9,14 @@
 <body>
     <a class="skip" href="#main">Skip to main content</a>
 
+    <!-- For our coding, we decided to keep the same structure and layout accoridng to our webpage made earlier in project 2 for simplicity and consistency.
+     We wanted to keep the same header and navigation bar for consistency and accessibility through the webpage alongside the same footer. We really enjoyed
+     the color contrast as it introduces a warm and inviting feeling to the webpage, turning a complex idea into a more approachable concept.
+     Layout wise, we kept it the same since it followed a seciton by section approach which is easier to follow. From there, our concept layout was to have
+     a hero section introducting the project, followed by a section that explained the project objective and scope. From there, we had a little contents section,
+     and the main sections of the project. This includes the process of building the model, trying the model, explaining the algorithm, and our reflections
+     on the project. When talking about topics that introduces new material or a level of complexity through debatable thought, we wanted our webpahe to
+     simple allow visitors to read and clearly understand our project, viewpoints through the project, and the implications of machine learning. -->
     <header>
         <div class="wrap">
             <p class="brand">LIS500 <span>Technology &amp; Equity</span></p>
@@ -41,8 +49,10 @@
                 <article>
                     <p class="number">02 / DATA</p>
                     <h3>Recording our Images</h3>
-                    <p>Build a collection of original image samples, including variation in lighting and angles.</p>
-                </article>
+                    <p>Our collection of original image samples, including variation in lighting and angles.</p>
+                <p> <a href="https://drive.google.com/drive/folders/194GI8KSdnHquYHPwj8jnAFOGESDTWKo_?usp=drive_link" target="_blank" rel="noopener noreferrer">View the training sample photos (Google Drive)</a></p>
+                    <p> Our sample was too large to upload onto Github, so access the samples here!</p>
+            </article>
             </div>
         </section>
 
@@ -52,7 +62,7 @@
                 <li><a href="#process">How we built the model</a></li>
                 <li><a href="#try-model">Try the model</a></li>
                 <li><a href="#algorithm">What happens when it predicts?</a></li>
-                <li><a href="#reflection">Project reflections</a></li>
+                <li><a href="#reflection">Project reflections & Feedback</a></li>
             </ul>
         </aside>
 
@@ -77,20 +87,22 @@
             <div id="webcam-container" aria-label="Live camera preview"></div>
             <div id="prediction-container" aria-label="Model predictions">
                 <h3>Predictions</h3>
+                <p>The model isn’t very confident. Try better lighting or a different angle.</p>
                 <ul class="prediction-list">
                     <li>
-                        <span>Casey resemblance (woman)</span>
+                        <span>Casey resemblance</span>
                         <div class="prediction-confidence">
                             <progress id="casey-probability" max="1" value="0" aria-label="Casey resemblance score">0%</progress>
                             <span id="casey-label">Waiting</span>
                         </div>
                     </li>
                     <li>
-                        <span>Ethan resemblance (man)</span>
+                        <span>Ethan resemblance</span>
                         <div class="prediction-confidence">
                             <progress id="ethan-probability" max="1" value="0" aria-label="Ethan resemblance score">0%</progress>
                             <span id="ethan-label">Waiting</span>
                         </div>
+                        <p>Disclaimer: The scores reflect resemblance to the training images, not the person’s identity</p>
                     </li>
                 </ul>
             </div>
@@ -98,7 +110,7 @@
 
         <section id="algorithm">
             <h2>What happens when it predicts?</h2>
-            <p> When the classifier makes a prediction, it provides a confidence score for each possible class (Ethan or Casey/  Man or Woman). The classier compares the image or webcam footage with the visual patterns it learned from the trained dataset, the gives the image a resemblance score for each class. It doesn't know a person's identity; thus, it can only match an image to the Casey, and Ethan labels used during training.</p>
+            <p> When the classifier makes a prediction, it provides a confidence score for each possible class (Ethan or Casey). The classier compares the image or webcam footage with the visual patterns it learned from the trained dataset, the gives the image a resemblance score for each class. It doesn't know a person's identity; thus, it can only match an image to the Casey, and Ethan labels used during training.</p>
             <p>Testing different lighting, angles, backgrounds, and people can reveal when its predictions become uncertain or incorrect. These results are useful evidence about the system's limits and not just the mistakes to hide behind a single accuracy score.</p>
         </section>
 
@@ -107,16 +119,20 @@
             <p>For our project, we wanted to explore how a machine learning model can be trained to recognize the differences between two individuals using images of them as inspired by Joy Buolamwini. Through this process, we used Google’s Teachable Machine to create an image classifier that can identify whether a picture could identify Ethan or Casey. Thus, our goal was to understand how machines learn from our visual data, and how the quality of the inputted data can affect their predictions.</p>
             <p>At first, we considered creating a facial expression classifier that could try to identify emotions such as happiness, sadness, or a neutral expression. However, we decided to change our direction and focus on two individuals instead. This narrows down the focus and allows the opportunity to examine how a machine learns how to distinguish between people based on the images it receives. Although the project seems simple on the surface, it raises important questions about how facial recognition systems work and whether we should even trust their results.</p>
             <p>Through this project process, we are each contributing roughly 100 photos each of ourselves, giving us a total dataset of approximately 200 images. Through these images, we plan to vary the lighting, camera angles, distance, or facial expressions. This will allow us to examine whether the model can still identify under the many different conditions and not just rely on similar looking photos. </p>
-            <p>One of the most important components of this project was collecting the images that we used to train the model. To train a model, we needed the machine to train from examples to learn from. Thus, we learned that the variety and quality of each image could have a crucial impact on how the model performs. Thus, for our dataset, we collected photographs of ourselves, both group members under different conditions. For example, some images will have brighter lighting, while others will have darker or uneven lighting. We also tried changing the distance between camera and the subject, and using different angles. These little differences are crucial to the process as it highlights how people do not always look the same in every photograph. </p>
+            <p>One of the most important components of this project was collecting the images that we used to train the model. To train a model, we needed the machine to train from examples to learn from. Thus, we learned that the variety and quality of each image could have a crucial impact on how the model performs. Then, for our dataset, we collected photographs of ourselves, both group members under different conditions. For example, some images will have brighter lighting, while others will have darker or uneven lighting. We also tried changing the distance between camera and the subject, and using different angles. These little differences are crucial to the process as it highlights how people do not always look the same in every photograph. </p>
             <p>We knew that if the model was trained under the same conditions, it might learn to recognize those specific conditions rather than the individuals we’re trying to teach it. This could lead to an inaccurate prediction where the model can encounter a photograph that looks different from the training images. This allows us to come to a conclusion that through this process, collection of data is not just about gathering as many samples as we can, but carefully collecting what these samples represent and what the model may encounter when processing its training. </p>
             <p>A huge influence on our project was Joy Buolamwini, and her book Unmasking AI. Her work discussed the problems that could occur when artificial intelligence systems are developed with incomplete or unrepresentative datasets. Joy’s significant research into commercial facial analysis systems found that significant differences in error rates across demographic groups prevails. As darker skin toned women experienced much greater error rates than lighter toned individuals examined by the system. This research connects directly to our project because we are creating a model that uses photographs of human faces to make predictions and resemblances to each label. Even though our classifier is much smaller and only recognizes two people, it depends on the data we provide it. Thus, if the predictions become less reliable as the conditions aren’t met.</p>
             <p>One lesson we’ve taken away from Buolamwini’s work was that artificial intelligence is not automatically objective. People make decisions about what to collect, categories of conditions, and how the model should be trained. These decisions can significantly influence results, and a machine may produce a prediction based on the patterns from its training data. However, something to note is that these predictions are always accurate or fair. We also recognize that our project has limitations that are different from the larger systems discussed from Joy’s Unmasking AI. Our dataset only includes two individuals, so it cannot represent the variety of faces, appearances, and conditions found within the general population. It would also be important to understand that just because the model can distinguish between us, it doesn’t mean that it would be capable of accurately recognizing other people.</p>
             <p>An additional question that we wanted to explore was whether our model was actually learning to recognize us as individuals or whether it was relying on the visual characteristics to make its results. Although we were training the model to distinguish between us (Ethan or Casey), it is possible that the model may identify patterns associated with these characteristics such as skin tone, facial features/ structures, hairstyle, or other visible features. These characteristics may help the model distinguish between our two categories, but they don’t necessarily mean that it will understand individual identity. This raises another question about how facial recognition systems learn from the human face. Could a machine trained to recognize two individuals begin relying on characteristics that are associated with demographic categories, such as race or gender presentations? Our model isn’t specifically designed to classify race or gender, but its predictions could still be influenced by visual characteristics that overlap from those categories. </p>
             <p>Furthermore, this connects to Joy Buolamwini’s discussion in Unmasking AI. Her research highlights how it is important to examine the data and characteristics that facial analysis systems rely on. This is as a model may appear to work correctly while still producing unequal or unreliable results under different conditions or different groups of people. Thus, through this experiment, we wanted to look beyond whether the model correctly identifies individuals if they match more as Ethan or Casey. We also wanted to consider what patterns it may be using to reach these conclusions. This helps us understand and gives another perspective that machine learning does not necessarily always learn what we intend to teach it. Instead, it may learn from the patterns available in its training data, which then introduces the limitations and untended biases.</p>
 
+            <h2> Project Reflection & Feedback</h2>
+            <p>	Throughout our project responses, one common suggestion was to introduce a third classification category labeled “Other.” At first, this seemed reasonable because it would allow the model to distinguish between Ethan, Casey, and individuals who were neither of us. However, after reflecting on Joy’s Unmasking AI, we further questioned whether adding another category would actually address the deeper concerns regarding facial recognition and algorithmic discrimination. </p>
+            <p> Unlike the Ethan and Casey categories, which represented two specific individuals, the “Other” category will contain a wide variety of different people with varying degrees of facial characteristics. Some individuals could also share similar visual aspects with either of us and this could potentially create overlapping patterns that make classification even more difficult. Furthermore, if the number of images in the “Other” category were to exceed or each image that was to be training the model isn’t equal to that of Ethan or Casey, the training set becomes significantly disproportionate. This little change could cause significant changes in how the model learns and distinguishes between classifications, and through this perspective, having more photos will not result in more accurate scores. </p>
+            <p> More importantly, adding another category will not really make the AI system more inclusive or less biased like how many people think it will. Buolamwini’s work demonstrated how facial recognition technologies can produce discrimination even when their training data and development processes fail to adequately represent different populations. Although our original model was to distinguish between two faces, the model could still rely on characteristics associated with race, skin tone, gender, or other visual pattern when making its predictions. </p>
+            <p> In all, we recognize that to improve an algorithm’s ability to make classifications on individuals doesn’t automatically make it accurate or fair. A model can always produce high confidentiality while incorrectly identifying individuals. Rather than thinking the addition of “Other” would resolve the concern, we chose to acknowledge the limitations of our two-class model. Our experiment was to reinforce Joy’s lesson from Unmasking AI. AI development requires not only what the algorithm can produce in outcome, but also how it learns, what influences its decision processes, and who might face the disadvantage by its predictions. </p>
         </section>
     </main>
-# Teachable Machine Code 
     <footer>
         <div class="wrap">
             <p>LIS500 · Technology &amp; Equity</p>
